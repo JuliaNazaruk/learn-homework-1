@@ -24,3 +24,27 @@ def main():
     
 if __name__ == "__main__":
     main()
+
+
+
+#ВЫПОЛНЕНИЕ ЗАДАНИЯ
+
+def lines_reconciliation(line1, line2):
+  line_val1 = input ('Введите первое значение ')
+  line_val2 = input ('Введите второе значение ')
+
+  if isinstance(line_val1, str) and isinstance(line_val2, str):
+
+    if line_val1 == line_val2:
+      return 1
+    elif len(line_val1) > len(line_val2) and line_val2 != "learn":
+      return 2
+    elif line_val2 == "learn":
+      return 3
+    
+
+  else:
+    return 0
+
+print(lines_reconciliation("Первое значение","Второе значение"))
+

@@ -23,3 +23,28 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+#ВЫПОЛНЕНИЕ ЗАДАНИЯ
+
+
+user_age = int(input("Сколько вам лет?  "))
+
+if isinstance(user_age, int):
+
+  if user_age < 7:
+    print ("Детский сад")
+  elif user_age <= 18:
+    print ("Школа")
+  elif user_age <= 23:
+    print ("ВУЗ")
+  elif user_age > 23:
+    print ("Работа")
+
+else:
+  print("Пожалуйста, введите целое положительное число")
+
+
+#Почему-то 
+
+
+
