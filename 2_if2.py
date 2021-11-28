@@ -48,3 +48,5 @@ def lines_reconciliation(line1, line2):
 
 print(lines_reconciliation("Первое значение","Второе значение"))
 
+#Не понятно, что нужно ввести, чтобы вернулся 0, input же возвращает Str
+
