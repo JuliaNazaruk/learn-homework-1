@@ -18,3 +18,16 @@ def hello_user():
     
 if __name__ == "__main__":
     hello_user()
+
+#Выполнение задания
+
+def mood (user_mood):
+  try:
+    while True:
+      user_mood = input("Как дела? ")
+      if user_mood == "Хорошо":
+          break
+  except KeyboardInterrupt:
+    print ("Пока!")
+
+mood (input("Как дела? "))
