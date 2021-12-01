@@ -15,6 +15,9 @@
     
 """
 
+
+
+
 questions_and_answers = {}
 
 def ask_user(answers_dict):
@@ -25,3 +28,38 @@ def ask_user(answers_dict):
     
 if __name__ == "__main__":
     ask_user(questions_and_answers)
+
+#Выполнение задания
+
+questions_and_answers_dict = {
+  "Как дела": "Хорошо!", 
+"Что делаешь?": "Программирую", 
+"Когда освободишься": "В пятницу", 
+"Куда пойдем гулять?": "В парк",
+}
+
+
+def small_talk (answer):
+  
+  return questions_and_answers_dict.get(answer, "No answer")
+  
+
+while  True:
+  answer = input ("Введите вопрос, может быть я знаю ответ ")
+  
+  if (small_talk (answer)) != "No answer" :
+    print(small_talk (answer))
+    break
+  else:
+    print("Попробуйте еще раз")
+
+
+
+
+
+  
+
+
+
+
+ 

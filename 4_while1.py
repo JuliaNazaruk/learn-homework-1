@@ -19,3 +19,14 @@ def hello_user():
     
 if __name__ == "__main__":
     hello_user()
+
+
+
+#Выполнение задания
+
+while True:
+    user_mood = input("Как дела? ")
+    if user_mood == "Хорошо":
+        break
+
+
