@@ -49,3 +49,5 @@ print(discounted("100", "4.5"))
 print(discounted("five", 5))
 print(discounted("сто", "десять"))
 print(discounted(100.0, 5, "10"))
+
+#Вместе с "Введите аргументы корректного типа" выпадает еще и None почему-то

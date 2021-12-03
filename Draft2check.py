@@ -7,13 +7,13 @@ logging.basicConfig(format='%(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO,
                     filename='bot.log')
 
-import settings
+import settings1
 
 PROXY = {
-  'proxy_url': settings.PROXY_URL,
+  'proxy_url': settings1.PROXY_URL,
     'urllib3_proxy_kwargs': {
-        'username': settings.PROXY_USERNAME,
-        'password': settings.PROXY_PASSWORD
+        'username': settings1.PROXY_USERNAME,
+        'password': settings1.PROXY_PASSWORD
     }
 }
 
@@ -29,7 +29,8 @@ def greet_user(update, context):
     user_markup = telebot.types.ReplyKeyboardMarkup(True, False)
     user_markup_row ("Mercury", "Venus")
     user_markup_row ("Earth", "Mars")
-    bot.send_message(message.from_user.id, reply_markup=user_markup)
+   
+    update.message.reply_text(user_markup)
 
 
 
@@ -61,7 +62,7 @@ def planet_place_answer(selected_planet):
 
 
 def main():
-    mybot = Updater(settings.API_KEY, request_kwargs=PROXY, use_context=True)
+    mybot = Updater(settings1.API_KEY, request_kwargs=PROXY, use_context=True)
 
     dp = mybot.dispatcher
     dp.add_handler(CommandHandler("start", greet_user))
@@ -74,5 +75,6 @@ def main():
 if __name__ == "__main__":
     main()
 
-#почему ephem и telebot выделены белым, а не ярко-зеленым, как Settings или logging
+#попробовала создать меню, чтобы пользователь выбирал планету, для исключения ошибки написания, но не работает почему-то
+# почему ephem и telebot выделены белым, а не ярко-зеленым, как Settings или logging
 #почему без кусочка с if __name___ (2 посл строки ничего не работало, а после начал работать кусочек greet_user)
