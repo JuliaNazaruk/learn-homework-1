@@ -19,21 +19,19 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-user_age = (input("Сколько вам лет?  "))
+try:
+    user_age = int(input("Сколько вам лет?  "))
+    if user_age < 7:
+        print("Если вам", str(user_age), "вы ходите в детский сад")
+    elif user_age <= 18:
+        print("Если вам", str(user_age), "вы ходите в школу")
+    elif user_age <= 23:
+        print("Если вам", str(user_age), "вы ходите в ВУЗ")
+    elif user_age > 23:
+        print("Если вам", str(user_age), "вы ходите на работу")
 
-if user_age.isnumeric():
-
-  if user_age < 7:
-    print("Если вам ", str(user_age), " вы ходите в детский сад")
-  elif user_age <= 18:
-    print("Если вам ", str(user_age), " вы ходите в школу")
-  elif user_age <= 23:
-    print("Если вам ", str(user_age), " вы ходите в ВУЗ")
-  elif user_age > 23:
-    print("Если вам ", str(user_age), " вы ходите на работу")
-
-else:
-  print("Пожалуйста, введите целое положительное число")
+except ValueError:
+    print("Пожалуйста, введите целое положительное число")
 
 if __name__ == "__main__":
     main()
